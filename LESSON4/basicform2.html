@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic form 2</title>
+    <link rel="stylesheet" href="./basicform2.css" />
+</head>
+
+<body>
+    <form method="post">
+        <h3>Class Application Form</h3>
+        <p>Full name: <input type="text" name="name" placeholder="Enter your full name" size="30" /></p>
+        <p>Date of birth: <input type="date" name="birth" placeholder="date of birth" /></p>
+        <p> Gender: <input type="radio" name="gender" value="male" /> Male <input type="radio" name="gender"
+                value="female" /> Female</p>
+        <p>Address: <input type="text" name="adress" style="row-gap: 123px;" placeholder="Enter your address"
+                size="40" /></p>
+        <p>Class: <select style="width: 140px;">
+                <option value="">Choose your class</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+                <option value="A4">A4</option>
+            </select></p>
+        <p>Email: <input type="email" name="email" placeholder="Enter your email" /></p>
+        <p>Phone: <input type="tel" name="phone" placeholder="Enter your phone number" /></p>
+        <button type="submit"> Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>

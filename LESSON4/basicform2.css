@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(205, 235, 75);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    color: blue;
+    background-color: aquamarine;
+}
+
+p {
+    color: darkblue;
+}
+
+option:first {
+    color: #999;
+}
