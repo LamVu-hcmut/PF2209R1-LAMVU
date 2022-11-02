@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday</title>
+</head>
+
+<body>
+    Year :<input type="number" placeholder="Year" id="year" min="1900" max="2022">
+    Month:<input type="number" placeholder="Month" id="month">
+    Date:<input type="number" placeholder="Date" id="date">
+    <button type="button" onclick="showBd()">Show My Birth Day</button>
+    <hr>
+    <div id="result"></div>
+    <script>
+        function showBd() {
+            document.getElementById('result').innerHTML = `Your birthday: ${document.getElementById('date').value}/${document.getElementById('month').value}/${document.getElementById('year').value}<br>
+            Your age: ${2022 - document.getElementById('year').value}`
+            doc
+        }
+    </script>
+</body>
+
+</html>
