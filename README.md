@@ -3,8 +3,8 @@
 LESSION 4: <BR>
 
   [Thực hành] Sử dụng thẻ HTML cơ bản <BR>
-  [Thực hành] Tạo bảng cơ bản
-  [Thực hành] Tạo form cơ bản
-  [Bài tập] Tạo danh sách
-  [Bài tập] Tạo giao diện form đăng ký người dùng
-  [Thực hành] Nhúng JavaScript
+  [Thực hành] Tạo bảng cơ bản <BR>
+  [Thực hành] Tạo form cơ bản <BR>
+  [Bài tập] Tạo danh sách<BR>
+  [Bài tập] Tạo giao diện form đăng ký người dùng<BR>
+  [Thực hành] Nhúng JavaScript<BR>
