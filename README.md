@@ -7,3 +7,4 @@ LESSION 4: <BR>
   [Thực hành] Tạo form cơ bản
   [Bài tập] Tạo danh sách
   [Bài tập] Tạo giao diện form đăng ký người dùng
+  [Thực hành] Nhúng JavaScript
