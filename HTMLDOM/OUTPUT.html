@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTPUT</title>
+</head>
+
+<body>
+    <button type="button" onclick="showMessage()">Click me!</button>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showMessageDiv()">Click TO test innerHTML!</button> <br>
+    <button type="button" onclick="showMessageWrite()">Condition ?</button>
+    <button type="button" onclick="showConsolelog()">You cannot see the change!</button>
+    <script>
+        function showMessage() {
+            alert('Hello !');
+        }
+        function showMessageDiv() {
+            document.getElementById('messageDiv').innerHTML = "Test inner HTML."
+        }
+        function showMessageWrite() {
+            document.write('How are you today ?');
+        }
+        function showConsolelog() {
+            console.log('Surprise!');
+        }
+    </script>
+</body>
+
+</html>
