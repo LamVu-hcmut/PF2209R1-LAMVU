@@ -8,8 +8,8 @@ LESSION 4: <BR>
   [Bài tập] Tạo danh sách<BR>
   [Bài tập] Tạo giao diện form đăng ký người dùng<BR>
   [Thực hành] Nhúng JavaScript<BR>
-[Thực hành] Nhập và xuất dữ liệu đơn giản với JavaScript<BR>
-<BR>
+  [Thực hành] Nhập và xuất dữ liệu đơn giản với JavaScript<BR>
+  [Thực hành] Hiển thị đầu ra<BR>
 <BR>
 <BR>
 <BR>
