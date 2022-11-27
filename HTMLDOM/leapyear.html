@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap year check</title>
+</head>
+
+<body>
+    Import year: <input type="number" id="year" value="2022">
+    <button type="button" onclick="check()">CHECK!</button>
+    <div id="result" style="font-size: 20px;">The result will be there!</div>
+    <script>
+        function check() {
+            let isLeapYear = false;
+            let year = parseInt(document.getElementById('year').value);
+            let isDivisible4 = year % 4 == 0;
+            let isDivisible100 = year % 100 == 0;
+            let isDivisible400 = year % 400 == 0;
+            if ((isDivisible4 && !isDivisible100) || (isDivisible100 && isDivisible400)) {
+                isLeapYear = true;
+            }
+            if (isLeapYear) {
+                document.getElementById('result').innerHTML = `${year} is a leap year.`
+            }
+            else {
+                document.getElementById('result').innerHTML = `${year} is not a leap year.`
+            }
+        }
+    </script>
+</body>
+
+</html>
