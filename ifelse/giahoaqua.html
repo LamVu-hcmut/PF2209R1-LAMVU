@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHƯƠNG TRÌNH XEM GIÁ HOA QUẢ</title>
+</head>
+
+<body>
+    <select id="fruit">
+        <option>Ổi</option>
+        <option>Dưa Hấu</option>
+        <option>Táo</option>
+        <option>Xoài</option>
+        <option>Cam</option>
+        <option>Chôm Chôm</option>
+        <option>Măng Cụt</option>
+    </select>
+    <button type="button" onclick="xemGia()">XEM GIÁ</button>
+    <hr>
+    <p>Giá sản phẩm: <span id='result'></span></p>
+
+    <script>
+        function xemGia() {
+            let fruit = document.getElementById('fruit').value;
+            console.log(fruit);
+            switch (fruit) {
+                case 'Ổi':
+                    document.getElementById('result').innerHTML = "20000 VNĐ/kg"
+                    break;
+                case 'Dưa Hấu':
+                    document.getElementById('result').innerHTML = "20000 VNĐ/kg"
+                    break;
+                case 'Táo':
+                    document.getElementById('result').innerHTML = "30000 VNĐ/kg"
+                    break;
+                case 'Xoài':
+                    document.getElementById('result').innerHTML = "30000 VNĐ/kg"
+                    break;
+                case 'Cam':
+                    document.getElementById('result').innerHTML = "40000 VNĐ/kg"
+                    break;
+                case 'Chôm Chôm':
+                    document.getElementById('result').innerHTML = "40000 VNĐ/kg"
+                    break;
+                case 'Măng Cụt':
+                    document.getElementById('result').innerHTML = "50000 VNĐ/kg"
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle and rectangle ollision</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Circle information: </legend>
+        Import x: <input type="number" id="x1" value="50" onchange="draw(), check()">
+        Import y: <input type="number" id="y1" value="50">
+        Import radius: <input type="number" id="r1" value="50">
+        Import color: <input type="text" id="c1" value="green"> <br>
+        <h4>Move the circle</h4>
+        <button type="button" onclick="moveLeft(),check()">Left</button>
+        <button type="button" onclick="moveRight(),check()">Right</button>
+        <button type="button" onclick="moveUp(),check()">Up</button>
+        <button type="button" onclick="moveDown(),check()">Down</button>
+
+    </fieldset>
+    <fieldset>
+        <legend>Rectangle information: </legend>
+        Import x: <input type="number" id="x2" value="100">
+        Import y: <input type="number" id="y2" value="100">
+        Import width: <input type="number" id="w2" value="50">
+        Import height: <input type="number" id="h2" value="100">
+        Import color: <input type="text" id="c2" value="purple">
+        <h4>Move the rectangle</h4>
+        <button type="button" onclick="moveLeftRec(),check()">Left</button>
+        <button type="button" onclick="moveRightRec(),check()">Right</button>
+        <button type="button" onclick="moveUpRec(),check()">Up</button>
+        <button type="button" onclick="moveDownRec(),check()">Down</button>
+
+    </fieldset>
+    <br>
+    <button type="button" onclick="draw(), check()">DRAW & CHECK!</button>
+    <div id="result" style="font-size: 20px;">The result of collision will be there!</div>
+    <br>
+    <canvas id="myCanvas" height="1000px" width="1200px" style="border: 1px solid grey;"></canvas>
+    <script src="./cirandrec.js"></script>
+</body>
+
+</html>

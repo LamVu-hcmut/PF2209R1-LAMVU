@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw on canvas</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000px" height="2000px" style="border: 1px solid #0000FF"></canvas>
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext('2d');
+        //Draw a line.
+        ctx.moveTo(0, 0);
+        ctx.lineTo(1000, 2000);
+        ctx.stroke();
+        //Draw a circle.
+        ctx.beginPath();
+        ctx.arc(400, 400, 200, 0, Math.PI * 1.5);
+        ctx.stroke();
+        //Draw a gradient rectangle.
+        let grd = ctx.createLinearGradient(0, 0, 1000, 2000);
+        grd.addColorStop(0, "green");
+        grd.addColorStop(1, "purple");
+        ctx.fillStyle = grd;
+        ctx.fillRect(300, 300, 450, 900);
+        //Draw another gradient rectangle.
+        let grd1 = ctx.createRadialGradient(100, 100, 100, 110, 110, 300);
+        grd1.addColorStop(0, "blue");
+        grd1.addColorStop(1, "orange");
+        ctx.fillStyle = grd1;
+        ctx.fillRect(60, 60, 600, 200);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Program</title>
+</head>
+
+<body>
+    <fieldset>
+        <form>
+            Name: <input type="text" id="Name" value="Lam Vu"> <br>
+            Phone: <input type="text" id="Phone" value="0000000000"> <br>
+            Mark: <input type="number" id="Mark" value="10"> <br>
+            Gender:
+            Male <input type="radio" id="Gender" value="Male" name="Gender" checked="checked">
+            Female <input type="radio" id="Gender" value="Female" name="Gender"> <br>
+            <button type="button" onclick="addStudent()">Add student</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Student List</legend>
+        <table>
+            <th>
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Mark</td>
+            <td>Gender</td>
+            </th>
+            <div id="result"></div>
+        </table>
+    </fieldset>
+    <script src="./studentList.js"></script>
+</body>
+
+</html>

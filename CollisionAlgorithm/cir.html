@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collision Circle</title>
+</head>
+
+<body>
+    <fieldset style="border: 2px solid green;">
+        <legend>Circle 1 information: </legend>
+        Import x:<input type="number" id="x1" value="50">
+        Import y: <input type="number" id="y1" value="50">
+        Import radius:<input type="number" id="r1" value="50">
+        Import color: <input type="text" id="c1" value="green">
+    </fieldset>
+    <fieldset style="border: 2px solid purple;">
+        <legend>Circle 2 information: </legend>
+        Import x:<input type="number" id="x2" value="150">
+        Import y: <input type="number" id="y2" value="150">
+        Import radius:<input type="number" id="r2" value="50">
+        Import color: <input type="text" id="c2" value="purple">
+    </fieldset>
+    <button type="button" onclick="draw(), check()">DRAW & CHECK!</button>
+    <br>
+    <div id="d" style="font-size: 25px;">The distance of 2 circle's center will be there.</div>
+    <div id="result" style="font-size: 25px;">The result of checking collision will be there!</div>
+    <br>
+    <canvas id="myCanvas" width="1300px" height="3000px" style="border: 2px solid brown;"></canvas>
+    <script src="./cir.js"></script>
+</body>
+
+</html>

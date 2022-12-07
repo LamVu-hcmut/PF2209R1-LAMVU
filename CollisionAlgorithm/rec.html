@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collision Rectangle</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            Enter the coordinate of Rectangle 1: <br>
+        </legend>
+        Import x: <input type="number" id="x1" value="0"> <br>
+        Import y: <input type="number" id="y1" value="0"> <br>
+        Import width: <input type="number" id="w1" value="100"> <br>
+        Import height:<input type="number" id="h1" value="200"> <br>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Enter the coordinate of Rectangle 2: <br>
+        </legend>
+        Import x: <input type="number" id="x2" value="200"> <br>
+        Import y: <input type="number" id="y2" value="0"> <br>
+        Import width: <input type="number" id="w2" value="100"> <br>
+        Import height:<input type="number" id="h2" value="200"> <br>
+    </fieldset>
+    <button type="button" onclick="draw1(), draw2(), check()">Draw and Check</button>
+    <div id="result">Result will be there!</div>
+    <canvas id="myCanvas" width="800" height="600" style="border: 1px solid #c3c3c3;"></canvas>
+
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        class Rect {
+            constructor(x, y, width, height) {
+                this.x = x;
+                this.y = y;
+                this.w = width;
+                this.h = height;
+            }
+        }
+        function draw1() {
+            ctx.clearRect(0, 0, 800, 600);
+            let rect1 = new Rect(parseFloat(document.getElementById("x1").value), parseFloat(document.getElementById("y1").value), parseFloat(document.getElementById("w1").value), parseFloat(document.getElementById("h1").value));
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(rect1.x, rect1.y, rect1.w, rect1.h);
+        }
+        function draw2() {
+            let rect2 = new Rect(parseFloat(document.getElementById("x2").value), parseFloat(document.getElementById("y2").value), parseFloat(document.getElementById("w2").value), parseFloat(document.getElementById("h2").value));
+            ctx.fillStyle = "#0000FF";
+            ctx.fillRect(rect2.x, rect2.y, rect2.w, rect2.h);
+        }
+        // xác định va chạm giữa 2 hình chữ nhật (đối tượng Rect)
+        function isCollision(rect1, rect2) {
+            let distX = (rect1.x + (rect1.w / 2)) - (rect2.x + (rect2.w) / 2);
+            if (distX < 0)
+                distX = -distX;
+            const distW = (rect1.w + rect2.w) / 2;
+            let distY = (rect1.y + (rect1.h / 2)) - (rect2.y + (rect2.h) / 2);
+            if (distY < 0)
+                distY = -distY;
+            const distH = (rect1.h + rect2.h) / 2;
+
+            return (distX <= distW && distY <= distH);
+        }
+        function check() {
+            let rect1 = new Rect(parseFloat(document.getElementById("x1").value), parseFloat(document.getElementById("y1").value), parseFloat(document.getElementById("w1").value), parseFloat(document.getElementById("h1").value));
+            let rect2 = new Rect(parseFloat(document.getElementById("x2").value), parseFloat(document.getElementById("y2").value), parseFloat(document.getElementById("w2").value), parseFloat(document.getElementById("h2").value));
+            console.log(isCollision(rect1, rect2));
+            if (isCollision(rect1, rect2)) {
+                document.getElementById("result").innerHTML = "There is a collision.";
+            }
+            else {
+                document.getElementById("result").innerHTML = "There is no collision.";
+            }
+        }
+    </script>
+</body>
+
+</html>

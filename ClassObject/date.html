@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE</title>
+</head>
+
+<body>
+    <script>
+        class MyDate {
+            constructor(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            toString() {
+                return `${this.day}/${this.month}/${this.year}`;
+            }
+            getDay() {
+                return this.day;
+            }
+            getMonth() {
+                return this.month;
+            }
+            getYear() {
+                return this.year;
+            }
+            setDay(day) {
+                this.day = day;
+            }
+            setMonth(month) {
+                this.month = month;
+            }
+            setYear(year) {
+                this.year = year;
+            }
+        }
+        let birthDay = new MyDate(13, 12, 2012);
+        console.log(birthDay.toString());
+        console.log(birthDay.day);
+        console.log(birthDay.year);
+        birthDay.setDay(2); birthDay.setMonth(4); birthDay.setYear(2004);
+        console.log(birthDay.toString());
+        console.log(birthDay);
+    </script>
+</body>
+
+</html>

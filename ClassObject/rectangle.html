@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+
+<body>
+    <form>
+        Import length: <input type="number" id="length"><br>
+        Import width: <input type="number" id="width"><br>
+        Import color: <input type="text" id="color"><br>
+        <button type="button" onclick="Calculate()">Calculate</button>
+        <button>Draw</button>
+    </form>
+    <hr>
+    <div id="result"></div>
+    <hr>
+    <canvas id="myCanvas" style="border: 1px solid #c3c3c3;"></canvas>
+    <script>
+        class Rectangle {
+            constructor(length, width, color) {
+                this.length = length;
+                this.width = width;
+                this.color = color;
+            }
+            getArea() {
+                return this.length * this.width;
+            }
+            getPerimeter() {
+                return (this.length + this.width) * 2;
+            }
+            setLength(length) {
+                this.length = length;
+            }
+            setWidth(width) {
+                this.length = width;
+            }
+            getLenghth() {
+                return this.length;
+            }
+            getWidth() {
+                return this.width;
+            }
+        }
+        function Calculate() {
+            let l = parseFloat(document.getElementById("length").value);
+            let w = parseFloat(document.getElementById("width").value);
+            let c = document.getElementsByClassName("color").value;
+            let rec = new Rectangle(l, w, c);
+            console.log(rec.color);
+            document.getElementById("result").innerHTML = `Your rectangle is ${rec.color} with area: ${rec.getArea()} and perimeter: ${rec.getPerimeter()}`;
+        }
+        function Draw() {
+            let l = parseFloat(document.getElementById("length").value);
+            let w = parseFloat(document.getElementById("width").value);
+            let c = document.getElementsByClassName("color").value;
+            let rec = new Rectangle(l, w, c);
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 199, 75);
+        }
+    </script>
+</body>
+
+</html>
